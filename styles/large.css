@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) {
+  .Certificate {
+    grid-column: 1/3;
+    padding: 20px;
+  }
+
+  #classesGrid {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .class {
+    width: 70px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 15px;
+  }
+}
