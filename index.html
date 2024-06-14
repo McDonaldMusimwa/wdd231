@@ -8,36 +8,50 @@
     <title>WDD 231 - Web front end 1-McDonald</title>
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/large.css" />
+    <script defer src="scripts/getdate.js"></script>
     <!-- Link to your CSS file -->
   </head>
   <body>
     <header>
-      <nav>
-        <h2>WDD 231 - Web Front End 1-McDonald Musimwa</h2>
-        <ul>
+      <div class="topnav">
+        <h2> McDonald Musimwa</h2>
+        <div id="burger-menu" class="burger-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <nav class="topnav">
+        <ul class="nav_menu">
           <li><a href="index.html">Home</a></li>
-          <li>
+          <li class="nav_item">
             <a
+              class="nav_link"
               href="https://www.linkedin.com/in/mcdonaldmusimwa"
               target="_blank"
-              >Linkedin</a
+              >LinkedIn</a
             >
           </li>
-        
-          <li>
+          <li class="nav_item">
             <a
               href="https://github.com/McDonaldMusimwa"
               target="_blank"
-              >Github</a
+              class="nav_link"
+              >GitHub</a
             >
           </li>
-          <li>
-            <a href="https://byui.instructure.com/" target="_blank">Champer</a>
+          <li class="nav_item">
+            <a
+              href="https://byui.instructure.com/"
+              target="_blank"
+              class="nav_link"
+              >Champer</a
+            >
           </li>
-          
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="card">
         <h3 class="heading-with-line">About Me</h3>
@@ -60,7 +74,7 @@
         <h3 class="heading-with-line">South Africa Capetown</h3>
 
         <p class="paragraph">
-            <img src="images/Flag-South-Africa.webp" alt="Flag-South-Africa" >
+          <img src="images/Flag-South-Africa.webp" alt="Flag-South-Africa" />
           Cape Town, nestled at the southern tip of Africa, is a vibrant and
           culturally diverse city renowned for its stunning natural beauty, rich
           history, and dynamic urban life. Surrounded by majestic mountains and
@@ -88,27 +102,29 @@
           <li><a href="https://nextjs.org/">React Framework (next js)</a></li>
         </ul>
       </section>
-      <section class="card Certificate" >
-        <h3>Web and Computer Programming Certificate</h3>
+      <section class="card Certificate">
+        <h3 class="heading-with-line">
+          Web and Computer Programming Certificate
+        </h3>
 
-        <div id="classesGrid">
-          <span class="class">CSE 110</span>
-          <span class="class">CSE 111</span>
-          <span class="class">CSE 210</span>
-          <span class="class">WDD 130</span>
-          <span class="class">WDD 131</span>
-          <span class="class">WDD 231</span>
-        </div>
+        
+          <div class="buttons">
+            <button id="show-all">Show All</button>
+            <button id="show-cse">Show CSE</button>
+            <button id="show-wdd">Show WDD</button>
+          </div>
+        
+        <div id="classesGrid"></div>
       </section>
     </main>
     <footer>
-      <div>
+      <p>
         ©<span id="currentyear"> </span>🤖 McDonald Musimwa 🤖 Capetown 🤖 South
         Africa
-      </div>
+      </p>
       <p id="lastmodified"></p>
     </footer>
-    <script src="scripts/getdate.js"></script>
+
     <!-- Link to your JavaScript file -->
   </body>
 </html>

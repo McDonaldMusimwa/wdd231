@@ -1,50 +1,227 @@
-@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap);nav a,nav ul,nav ul li{text-decoration:none}footer,nav{background-color:var(--background);color:#0c0c0c;padding:1rem}:root{--background:#cadff5;--white:#ffffff}*{font-family:"Josefin Sans",sans-serif}nav{display:flex;justify-content:space-between;align-items:center}nav a{color:#0c0c0c;padding:.5rem 1rem}nav ul{list-style:none}nav ul li{float:left;color:#f2f2f2;text-align:center;padding:14px 16px;font-size:17px}nav ul li a:hover{background-color:#99c0b2;color:#000;border-radius:12px}nav ul li a.active{background-color:#04aa6d;color:#fff}main{display:grid;grid-template-columns:60% 40%;margin:3%}footer{display:flex;flex-direction:column;justify-content:space-between;align-items:center}.card{border:1px solid #000;padding:20px;margin:5px;border-radius:10px}.card h3{text-align:center;height:50px;padding:2px;width:100%;font-size:150%}body{margin:0 10%}.paragraph{display:flex;flex-direction:row}.paragraph img{border-radius:5px;margin:5px;width:20%;height:80%}.heading-with-line{position:relative}.heading-with-line::after{content:"";position:absolute;left:0;right:0;bottom:-5px;border-bottom:2px solid #000}
-
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap);
 
 @media screen and (max-width: 768px) {
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
-    nav ul {
-        display: flex;
-        flex-direction: column;
-    }
-
-    nav ul li a{
-        margin: 1px;
-    }
-    nav ul li {
-      float: none;
-      display: block;
-      text-align: center;
-      padding: 10px 0;
-    }
-    main{
-        display: grid;
-        grid-template-columns: 100%;
-    }
-    .paragraph{
-        display: flex;
-        flex-direction: column;
-    }
-    .paragraph img{
-        width: 100%;
-        margin: 15px 0 15px 0;
-    }
-
-    #classesGrid {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    :root {
+        --background: #cadff5;
+        --white: #ffffff;
       }
-    
-      .class {
-        width: 90%;
-        height: 20px;
-        border-radius: 4px;
-        border: 1px solid black;
-        padding: 15px;
-        margin: 5px;
+      
+      * {
+        font-family: "Josefin Sans", sans-serif;
       }
+      
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: black;
+      }
+      
+      .burger-menu {
+        display: block;
+        cursor: pointer;
+      }
+      
+      .burger-menu.active .bar:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+      }
+      
+      .burger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .burger-menu.active .bar:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+      }
+      
+      .nav_menu {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: -110%;
+        top: 100px;
+        width: 86%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: var(--background); /* Added background color for visibility */
+        margin: 0 2%;
+        opacity: 100%;
+      }
+      
+      .nav_item {
+        margin: 16px 0;
+      }
+      
+      .nav_menu.active {
+        left: 0;
+      }
+      
+      .topnav {
+        display: flex;
+        justify-content: space-between; /* Adjusted to space items between */
+        align-items: center;
+      }
+      
+      nav a,
+      nav ul,
+      nav ul li {
+        text-decoration: none;
+      }
+      
+      footer,
+      header {
+        background-color: var(--background);
+        color: #0c0c0c;
+        padding: 1rem;
+        z-index: 100;
+      }
+      
+      header > h2 {
+        font-size: 1.5rem;
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      nav a {
+        color: #0c0c0c;
+        padding: 0.5rem 1rem;
+      }
+      
+      nav ul {
+        list-style: none;
+      }
+      
+      nav ul li {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 17px;
+      }
+      
+      nav ul li a:hover {
+        background-color: #99c0b2;
+        color: #000;
+        border-radius: 12px;
+      }
+      
+      nav ul li a.active {
+        background-color: #04aa6d;
+        color: #fff;
+      }
+      
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    z-index: -100;
   }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .card h3 {
+    text-align: center;
+    height: 50px;
+    padding: 2px;
+    width: 100%;
+    font-size: 150%;
+  }
+
+  .paragraph {
+    display: flex;
+    flex-direction: row;
+  }
+  .paragraph img {
+    border-radius: 5px;
+    margin: 5px;
+    width: 20%;
+    height: 80%;
+  }
+  .heading-with-line {
+    position: relative;
+  }
+  .heading-with-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    border-bottom: 2px solid #000;
+  }
+
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li a {
+    margin: 1px;
+  }
+  nav ul li {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+  }
+  .paragraph img {
+    width: 100%;
+    margin: 15px 0 15px 0;
+  }
+
+  #classesGrid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+.class{
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid black;
+    height: 20px;
+    padding: 15px;
+    
+}
+  .class:hover{
+    background-color:antiquewhite;
+    color: #000;
+    transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .completed{
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-weight:bold ;
+    padding: 15px;
+  }
+}

@@ -1,4 +1,54 @@
-@media screen and (min-width: 768px) {
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap);
+@media only screen and (min-width: 768px) {
+  :root {
+    --background: #cadff5;
+    --white: #ffffff;
+  }
+  * {
+    font-family: "Josefin Sans", sans-serif;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    color: #0c0c0c;
+    padding: 1rem;
+  }
+  nav a,
+  nav ul,
+  nav ul li {
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav a {
+    color: #0c0c0c;
+    padding: 0.5rem 1rem;
+  }
+  nav ul {
+    list-style: none;
+  }
+  nav ul li {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+  nav ul li a:hover {
+    background-color: #99c0b2;
+    color: #000;
+    border-radius: 12px;
+  }
+  nav ul li a.active {
+    background-color: #04aa6d;
+    color: #fff;
+  }
   .Certificate {
     grid-column: 1/3;
     padding: 20px;
@@ -10,10 +60,99 @@
   }
 
   .class {
-    width: 70px;
+    text-align: center;
+    width: 90px;
     height: 20px;
     border-radius: 4px;
     border: 1px solid black;
     padding: 15px;
+  }
+
+  .class:hover {
+    background-color: antiquewhite;
+    color: #000;
+    transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .completed {
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 3%;
+  }
+  footer {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #a5cbf3;
+    border: none;
+    color: #0c0c0c;
+    border-radius: 5px;
+  }
+
+  .buttons button:hover {
+    background-color: #047cfc;
+  }
+
+  .card {
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .card h3 {
+    text-align: center;
+    height: 50px;
+    padding: 2px;
+    width: 100%;
+    font-size: 150%;
+  }
+  body {
+    margin: 0 10%;
+  }
+  .paragraph {
+    display: flex;
+    flex-direction: row;
+  }
+  .paragraph img {
+    border-radius: 5px;
+    margin: 5px;
+    width: 20%;
+    height: 80%;
+  }
+  .heading-with-line {
+    position: relative;
+  }
+  .heading-with-line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    border-bottom: 2px solid #000;
+  }
+
+  .burger-menu {
+    display: none;
   }
 }
