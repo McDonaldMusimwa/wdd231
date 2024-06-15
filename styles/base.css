@@ -202,15 +202,16 @@
     flex-direction: column;
     justify-content: space-around;
   }
-.class{
+  .class{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin: 5px 0;
-    border-radius: 4px;
-    border: 1px solid black;
+    
     height: 20px;
     padding: 15px;
-    
-}
+  }
+
   .class:hover{
     background-color:antiquewhite;
     color: #000;
@@ -223,5 +224,49 @@
     color: white;
     font-weight:bold ;
     padding: 15px;
+  } 
+
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #a5cbf3;
+    border: none;
+    color: #0c0c0c;
+    border-radius: 5px;
+  }
+
+  .buttons button:hover {
+    background-color: #047cfc;
+  }
+
+  .courseWorkCard {
+    /* Add shadows to create the "card" effect */
+    border: 1px black solid;
+    transition: 0.3s;
+    margin: 5px 0;
+    border-radius: 8px;
+  }
+  .courseWorkCard >h4, p{
+    margin: 4px;
+  }
+  /* On mouse-over, add a deeper shadow */
+  .courseWorkCard:hover {
+    background-color: antiquewhite;
+    color: #000;
+    transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Add some padding inside the card container */
+  .Cardcontainer {
+    padding: 2px 5px;
   }
 }

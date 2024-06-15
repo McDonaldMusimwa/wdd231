@@ -58,15 +58,16 @@
     display: flex;
     justify-content: space-evenly;
   }
-
-  .class {
-    text-align: center;
-    width: 90px;
-    height: 20px;
-    border-radius: 4px;
-    border: 1px solid black;
-    padding: 15px;
-  }
+.class{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 110px;
+  height: 20px;
+  
+  padding: 15px;
+}
+ 
 
   .class:hover {
     background-color: antiquewhite;
@@ -154,5 +155,28 @@
 
   .burger-menu {
     display: none;
+  }
+
+  .courseWorkCard {
+    /* Add shadows to create the "card" effect */
+    border: 1px black solid;
+    transition: 0.3s;
+    margin: 5px 0;
+    border-radius: 8px;
+  }
+  .courseWorkCard >h4, p{
+    margin: 4px;
+  }
+  /* On mouse-over, add a deeper shadow */
+  .courseWorkCard:hover {
+    background-color: antiquewhite;
+    color: #000;
+    transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Add some padding inside the card container */
+  .Cardcontainer {
+    padding: 2px 5px;
   }
 }

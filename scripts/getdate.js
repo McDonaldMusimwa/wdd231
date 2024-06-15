@@ -78,12 +78,20 @@ function renderCourses(filterFn) {
     classesGrid.innerHTML = ''; // Clear existing courses
     courses.forEach((cos) => {
       if (filterFn(cos)) {
+        const courseContainer = document.createElement("div");
         const element = document.createElement("span");
+        
         element.className = "class";
+        courseContainer.className="Coursecontainer";
         if (cos.completed) {
           element.classList.add("completed");
+          
         }
         element.innerHTML = `${cos.subject} ${cos.number}`;
+        
+        
+        
+     
         classesGrid.appendChild(element);
       }
     });
@@ -127,3 +135,35 @@ document.querySelectorAll(".nav_link").forEach((n) => {
     navMenu.classList.remove("active");
   });
 });
+
+/*total courses*/
+
+function calculateTotalCredits() {
+  const total_Credits = courses.reduce((accumulater, course) => accumulater + course.credits, 0);
+
+  document.getElementById("totalcredit").innerText = total_Credits;
+  
+}
+calculateTotalCredits()
+
+/*coursework grid*/
+courses.forEach(course=>{
+  const card = document.createElement("div");
+  card.className = "courseWorkCard";
+  if (course.completed) {
+    card.classList.add("completed");
+    
+  }
+  const title = document.createElement("h4");
+  const coursecard = document.createElement("p");
+const credits = document.createElement("p");
+  title.innerHTML =  course.title;
+  coursecard.innerHTML = `${course.subject} ${course.number}`;
+  credits.innerHTML = `credits : ${course.credits}`;
+  card.appendChild(title)
+  card.appendChild(coursecard);
+  card.appendChild(credits);
+
+
+  document.getElementById("courseWorkGrid").appendChild(card)
+})
