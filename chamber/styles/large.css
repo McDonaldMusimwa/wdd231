@@ -1,0 +1,65 @@
+
+@media only screen and (min-width:64rem) {
+  *{
+    margin: 0;
+    font-size: 100%;
+    font-family: "Raleway", sans-serif;
+  }
+  :root {
+    --background: #cadff5;
+    --white: #ffffff;
+  }
+  header{
+    display: flex;
+    flex-direction: row;
+  }
+  header .topnav{
+    display: inline;
+    width: 50%;
+  }
+  .nav_menu {
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 30%;
+    top: 10px;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: var(
+      --background
+    ); /* Added background color for visibility */
+    margin: 0 2%;
+    opacity: 100%;
+  }
+
+
+  .burger-menu {
+    display: none;
+  }
+  .list section {
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+.list{
+  width: 80%;
+  margin: 5% auto;
+}
+.list section{
+  width: 100%;
+  margin: 0.2% auto;
+}
+  .grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 5px;
+    align-items: center;
+  }
+  main{
+    margin-top: 10%;
+  }
+}

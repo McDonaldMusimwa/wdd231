@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --background: #cadff5;
+  --white: #ffffff;
+}
+  * {
+    margin: 0;
+    font-size: 120%;
+    font-family: "Raleway", sans-serif;
+  }
+
+  #logo {
+    width: 250px;
+  }
+  .logocontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .logocontainer > h2 {
+    font-size: 25px;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger-menu.active .bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  .burger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+
+  .nav_menu {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: -110%;
+    top: 100px;
+    width: 86%;
+    text-align: center;
+    transition: 0.3s;
+    background-color: var(
+      --background
+    ); /* Added background color for visibility */
+    margin: 0 2%;
+    opacity: 100%;
+  }
+
+  .nav_item {
+    margin: 16px 0;
+  }
+
+  .nav_menu.active {
+    left: 0;
+  }
+
+  .topnav {
+    display: flex;
+    justify-content: space-between; /* Adjusted to space items between */
+    align-items: center;
+  }
+
+  nav a,
+  nav ul,
+  nav ul li {
+    text-decoration: none;
+  }
+
+  footer,
+  header {
+    background-color: var(--background);
+    color: #0c0c0c;
+    padding: 1rem;
+    z-index: 100;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header > h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    color: #0c0c0c;
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  nav ul li {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+  }
+
+  nav ul li a:hover {
+    background-color: #99c0b2;
+    color: #000;
+    border-radius: 12px;
+  }
+
+  nav ul li a.active {
+    background-color: #04aa6d;
+    color: #fff;
+  }
+  main {
+    text-align: center;
+  }
+  .grid .BusinessCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 1px black solid;
+    font-size: 25px;
+    padding: 20px;
+    margin: 35px;
+  }
+  .logoSide {
+    display: flex;
+    flex-direction: column;
+  }
+  .logoSide > img {
+    width: 350px;
+  }
+  .adresSide {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    align-items: center;
+  }
+
+  .grid section {
+    text-align: center;
+  }
+
+  .grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
+  }
+
+  .grid section > * {
+    margin: 0.1rem;
+  }
+
+  .grid h3 {
+    font-family: "Caveat", cursive;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list section {
+    padding: 15px;
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .list section > * {
+    margin: 0 1rem;
+  }
+
+  /*
+.list section img {
+	display: none; 
+}
+*/
+  .list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+  }
+
+  .list section:nth-child(even) {
+    background-color: var(--background);
+  }
+
+  section h3 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  section a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: 1.1pt;
+    border: 1px solid navy;
+    margin: 5px;
+    padding: 5px;
+  }
+

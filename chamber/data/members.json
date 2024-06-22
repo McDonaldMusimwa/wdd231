@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Fruitify",
+    "logo": "./images/fruitvegie.gif",
+    "address": "1 Harvey Brown Road Harare milton park",
+    "phone": "📞+263 67 103 442",
+    "site": "https://fruitify-nine.vercel.app/",
+    "category": "food",
+    "membershiplevel": "Silver"
+  },
+  {
+    "name": "FitClub",
+    "logo": "./images/gym.gif",
+    "address": "27 Maynard road Wyneberg Capetown",
+    "phone": "📞+27 61 103 442",
+    "site": "https://mcdonaldmusimwa.github.io/FitClub/",
+    "category": "💪fitness",
+    "membershiplevel": "Gold"
+  },
+  {
+    "name": "Sstocky",
+    "logo": "./images/StockGif.gif",
+    "address": "mojo market seapoint",
+    "phone": "📞+27 61 493 542",
+    "site": "https://mcdonaldmusimwa.github.io/stockifylandingpage/",
+    "category": "📱techsales",
+    "membershiplevel": "Silver"
+  },
+
+  {
+    "name": "Fashionava",
+    "logo": "./images/fashion.gif",
+    "address": "V&A WaterFront Capetown",
+    "phone": "📞+27 61 449 442",
+    "site": "https://fashionoza.netlify.app/",
+    "category": "clothing",
+    "membershiplevel": "Gold"
+  },
+  {
+    "name": "Singular Systems",
+    "logo": "./images/singular.png",
+    "address": "1 Harvey Brown Road Harare milton park",
+    "phone": "📞+27 (0)10 003 0700",
+    "site": "https://www.singular.co.za/",
+    "category": "📱techsales",
+    "membershiplevel": "Gold"
+  },
+  {
+    "name": "Zone fitness",
+    "logo": "./images/zone.png",
+    "address": "27 Maynard road Wyneberg Capetown",
+    "phone": "📞+27 61 103 442",
+    "site": "https://zonefitness.co.za/",
+    "category": "💪fitness",
+    "membershiplevel": "Silver"
+  },
+  {
+    "name": "Mobicel",
+    "logo": "./images/mobicel.webp",
+    "address": "mojo market seapoint",
+    "phone": "📞+27 61 493 542",
+    "site": "https://mobicel.co.za/",
+    "category": "📱techsales",
+    "membershiplevel": "Silver"
+  }
+]
