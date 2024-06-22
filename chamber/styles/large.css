@@ -9,6 +9,10 @@
     --background: #cadff5;
     --white: #ffffff;
   }
+  #logo{
+    width: 30%;
+    height: 40%;
+  }
   header{
     display: flex;
     flex-direction: row;
@@ -25,7 +29,7 @@
     left: 30%;
     top: 10px;
     align-items: center;
-    width: 100%;
+    width: 40%;
     text-align: center;
     transition: 0.3s;
     background-color: var(
@@ -40,7 +44,7 @@
     display: none;
   }
   .list section {
-    font-size: 15px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -61,5 +65,26 @@
   }
   main{
     margin-top: 10%;
+  }
+  .grid section .logoSide{
+    display: flex;
+    flex-direction: column;
+  }
+  .list section .logoSide{
+    display: flex;
+    flex-direction: row;
+  }
+  .grid section .logoSide > img {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+
+  .list section .logoSide > img {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
   }
 }

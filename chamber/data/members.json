@@ -1,7 +1,7 @@
 [
   {
     "name": "Fruitify",
-    "logo": "./images/fruitvegie.gif",
+    "logo": "./images/fruitvegie.png",
     "address": "1 Harvey Brown Road Harare milton park",
     "phone": "📞+263 67 103 442",
     "site": "https://fruitify-nine.vercel.app/",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Sstocky",
-    "logo": "./images/StockGif.gif",
+    "logo": "./images/Stock.png",
     "address": "mojo market seapoint",
     "phone": "📞+27 61 493 542",
     "site": "https://mcdonaldmusimwa.github.io/stockifylandingpage/",
@@ -29,7 +29,7 @@
 
   {
     "name": "Fashionava",
-    "logo": "./images/fashion.gif",
+    "logo": "./images/fashion.jpg",
     "address": "V&A WaterFront Capetown",
     "phone": "📞+27 61 449 442",
     "site": "https://fashionoza.netlify.app/",
