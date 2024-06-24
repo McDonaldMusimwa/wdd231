@@ -5,10 +5,12 @@
 }
 * {
   margin: 0;
-  font-size: 120%;
+  font-size: 100%;
   font-family: "Raleway", sans-serif;
 }
-
+main{
+  background-color: white;
+}
 #logo {
   width: 50%;
   height: 40%;
@@ -51,16 +53,16 @@
   z-index: 100;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   left: -110%;
-  top: 100px;
-  width: 86%;
+  top: 70px;
+  width: 50%;
   text-align: center;
   transition: 0.3s;
   background-color: var(
     --background
   ); /* Added background color for visibility */
-  margin: 0 2%;
+  
   opacity: 100%;
 }
 
@@ -142,9 +144,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   border-bottom: 1px black solid;
-  font-size: 25px;
-  padding: 20px;
-  margin: 35px;
+ 
+  padding: .5rempx;
+  margin: .5rem;
 }
 .logoSide {
   display: flex;
@@ -231,10 +233,98 @@ section p {
 
 section a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: .8rem;
   color: black;
   letter-spacing: 1.1pt;
   border: 1px solid navy;
-  margin: 5px;
-  padding: 5px;
+  margin:.5rem;
+  padding: .5rem;
 }
+
+/* Hero image*/
+.hero-image {
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/chamber/images/table.jpg");*/
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-image img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text a {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  font-weight: bold;
+  background-color: #e0e1e2a9;
+  text-align: center;
+  cursor: pointer;
+ 
+}
+
+.hero-text a:hover {
+  transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* westher section */
+.weather-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  } 
+  .card h3{
+    text-decoration:underline;
+    font-size: 100%;
+  }
+/*business cards section*/
+#BusinessCards{
+ display: flex;
+ flex-direction: column;
+}
+.column {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.BusinessSpotLight_Bottom{
+
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.BusinessSpotLight_Bottom div{
+
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+ 
+}
+
+.BusinessSpotLight_Bottom img{
+  width: 30%;
+}
+/* Style the counter cards */

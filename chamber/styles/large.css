@@ -63,9 +63,7 @@
     grid-gap: 5px;
     align-items: center;
   }
-  main{
-    margin-top: 10%;
-  }
+
   .grid section .logoSide{
     display: flex;
     flex-direction: column;
@@ -87,4 +85,26 @@
     margin-bottom: 15px;
     margin-left: 20px;
   }
+
+
+  /* westher section */
+.weather-section{
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+}
+
+/*business cards section*/
+
+/*hero*/
+
+.hero-image img{
+  height: 30%;
+}
+
+}
+
+/* Business spotlight */
+#BusinessCards{
+  display: grid;
+  grid-template-columns: 33.33% 33.3% 33.3%;
 }

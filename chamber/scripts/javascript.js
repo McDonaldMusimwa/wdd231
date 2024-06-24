@@ -1,4 +1,5 @@
-//const data = require('./business.json');
+import { useBusinessData } from "./rendercards.js";
+import { businessSpotlight } from "./spotlight.js";
 
 /* Hamburger Menu*/
 const hamburger = document.querySelector("#burger-menu");
@@ -23,75 +24,49 @@ const lastmodified = document.lastModified;
 document.getElementById("lastmodified").innerHTML =
   "Last Modification " + Date(lastmodified);
 
-/* Render Business */
-
 const businesSection = document.getElementById("BusinessesContainer");
+const business_cards = document.getElementById("BusinessCards");
 
 // Fetch the JSON data from the server
 async function fetchBusiess() {
   try {
-    const response =await fetch("data/members.json");
+    const response = await fetch("data/members.json");
     const data = await response.json();
-    useBusinessData(data);
+    const spotlight = data.slice(0, 3);
+
+    useBusinessData(data, businesSection);
+    businessSpotlight(spotlight);
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }
 }
+fetchBusiess();
 
-function useBusinessData(businessData) {
-  // Perform operations with the business data
-  console.log(businessData);
-  businessData.forEach((bus) => {
-    const div = document.createElement("section");
-    const img = document.createElement("img");
-    const atag = document.createElement("a");
-    const title = document.createElement("h3");
-    const phone = document.createElement("span");
-    const adress = document.createElement("span");
-    const div2 = document.createElement("div");
-    const div3 = document.createElement("div");
+async function fetchSpotBusiess() {
+  try {
+    const response = await fetch("data/members.json");
+    const data = await response.json();
+    const spotlight = data.slice(0, 3);
 
-    div.className = "BusinessCard";
-    div2.className = "logoSide";
-    div3.className = "adresSide";
-
-    img.src = bus.logo;
-    img.alt = `${bus.name} logo`
-    title.innerHTML = bus.name;
-
-    atag.href = bus.site;
-    atag.innerHTML = bus.name;
-    atag.target = "_blank";
-    phone.innerHTML = `Phone: ${bus.phone}`;
-    adress.innerHTML = `Adress: ${bus.address}`;
-
-    div3.appendChild(phone);
-    div3.appendChild(adress);
-    div3.appendChild(atag);
-
-    div2.appendChild(img);
-    div2.appendChild(title);
-
-    div.appendChild(div2);
-    div.appendChild(div3);
-    document.querySelector("article").classList = "grid";
-    businesSection.appendChild(div);
-  });
+  
+    businessSpotlight(spotlight,business_cards);
+  } catch (error) {
+    console.error("Error fetching JSON:", error);
+  }
 }
-fetchBusiess()
+fetchSpotBusiess();
 
-
-/* switch directory display*/
+/* switch directory display */
 const gridButton = document.getElementById("grid");
 const listButton = document.getElementById("list");
-const display = document.querySelector("article")
+const display = document.querySelector("article");
 
-gridButton.addEventListener("click",()=>{
+gridButton.addEventListener("click", () => {
   display.classList.add("grid");
   display.classList.remove("list");
-})
+});
 
-listButton.addEventListener("click",()=>{
+listButton.addEventListener("click", () => {
   display.classList.add("list");
-  display.classList.remove("grid")
-})
+  display.classList.remove("grid");
+});
