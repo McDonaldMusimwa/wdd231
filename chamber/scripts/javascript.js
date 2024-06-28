@@ -1,5 +1,9 @@
 import { useBusinessData } from "./rendercards.js";
 import { businessSpotlight } from "./spotlight.js";
+//import { FetchCurrentWeatherReport } from "./weather.js";
+
+//import { FetchWeatherForecastReport } from "./weather.js";
+//import { CreateWeatherCards } from "./utity.js";
 
 /* Hamburger Menu*/
 const hamburger = document.querySelector("#burger-menu");
@@ -48,8 +52,7 @@ async function fetchSpotBusiess() {
     const data = await response.json();
     const spotlight = data.slice(0, 3);
 
-  
-    businessSpotlight(spotlight,business_cards);
+    businessSpotlight(spotlight, business_cards);
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }
@@ -70,3 +73,26 @@ listButton.addEventListener("click", () => {
   display.classList.add("list");
   display.classList.remove("grid");
 });
+
+/* Weather section and calls 
+const lat = 33.92;
+const lon = 18.42;
+const APIKEY = "72ed033637d24102f0b8d9c2285a5091";
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=33.92&lon=18.42&appid=72ed033637d24102f0b8d9c2285a5091`;
+
+async function FetchCurrentWeatherReport(link) {
+  try {
+    const response = await fetch(link);
+    const data = await response.json();
+
+    return JSON.stringify(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const data = await FetchCurrentWeatherReport(weatherUrl);
+console.log("data: " + data);
+*/
+
+console.log("i am here")

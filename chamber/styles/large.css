@@ -1,26 +1,30 @@
-
 @media only screen and (min-width:64rem) {
-  *{
+  * {
     margin: 0;
     font-size: 100%;
     font-family: "Raleway", sans-serif;
   }
+
   :root {
     --background: #cadff5;
     --white: #ffffff;
   }
-  #logo{
+
+  #logo {
     width: 30%;
     height: 40%;
   }
-  header{
+
+  header {
     display: flex;
     flex-direction: row;
   }
-  header .topnav{
+
+  header .topnav {
     display: inline;
     width: 50%;
   }
+
   .nav_menu {
     z-index: 100;
     display: flex;
@@ -32,31 +36,44 @@
     width: 40%;
     text-align: center;
     transition: 0.3s;
-    background-color: var(
-      --background
-    ); /* Added background color for visibility */
+    background-color: var(--background);
+    /* Added background color for visibility */
     margin: 0 2%;
     opacity: 100%;
+  }
+
+  nav li {
+    color: #0c0c0c;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    color: #0c0c0c;
+    padding: 0.5rem 0.5rem;
   }
 
 
   .burger-menu {
     display: none;
   }
+
   .list section {
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-.list{
-  width: 80%;
-  margin: 5% auto;
-}
-.list section{
-  width: 100%;
-  margin: 0.2% auto;
-}
+
+  .list {
+    width: 80%;
+    margin: 5% auto;
+  }
+
+  .list section {
+    width: 100%;
+    margin: 0.2% auto;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -64,22 +81,24 @@
     align-items: center;
   }
 
-  .grid section .logoSide{
+  .grid section .logoSide {
     display: flex;
     flex-direction: column;
   }
-  .list section .logoSide{
+
+  .list section .logoSide {
     display: flex;
     flex-direction: row;
   }
-  .grid section .logoSide > img {
+
+  .grid section .logoSide>img {
     width: 80%;
     height: 100%;
     margin-bottom: 15px;
     margin-left: 20px;
   }
 
-  .list section .logoSide > img {
+  .list section .logoSide>img {
     width: 50%;
     height: 100%;
     margin-bottom: 15px;
@@ -88,23 +107,29 @@
 
 
   /* westher section */
-.weather-section{
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-}
+  .weather-section {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+  }
 
-/*business cards section*/
+  /*business cards section*/
 
-/*hero*/
+  /*hero*/
 
-.hero-image img{
-  height: 30%;
-}
+  .hero-image img {
+    height: 30%;
+  }
 
-}
+  .card {
+    padding: 0.1rem;
+    margin: .4rem;
+  }
 
-/* Business spotlight */
-#BusinessCards{
-  display: grid;
-  grid-template-columns: 33.33% 33.3% 33.3%;
+
+  /* Business spotlight */
+  #BusinessCards {
+    display: grid;
+    grid-template-columns: 33.33% 33.3% 33.3%;
+    
+  }
 }

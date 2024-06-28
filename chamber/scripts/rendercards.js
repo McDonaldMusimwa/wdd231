@@ -1,7 +1,7 @@
 function useBusinessData(businessData,businesSection) {
     // Perform operations with the business data
     
-    businessData.forEach((bus) => {
+    businessData?.forEach((bus) => {
       const div = document.createElement("section");
       const img = document.createElement("img");
       const atag = document.createElement("a");
@@ -35,7 +35,7 @@ function useBusinessData(businessData,businesSection) {
       div.appendChild(div2);
       div.appendChild(div3);
       document.querySelector("article").className = "grid";
-      businesSection.appendChild(div);
+      businesSection?.appendChild(div);
     });
   }
 
