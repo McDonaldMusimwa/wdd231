@@ -6,6 +6,7 @@ function businessSpotlight(businessData, business_cards) {
 
 
   businessData.forEach((bus) => {
+  
     const div = document.createElement("div");
     div.className = "card";
 

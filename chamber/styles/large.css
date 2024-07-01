@@ -109,13 +109,39 @@
   /* westher section */
   .weather-section {
     display: grid;
-    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 39% 20% 40%;
+    gap: .5%;
   }
 
+  #currentWeather{
+justify-content: center;
+align-items: center;
+  }
+
+  #weatherfocust{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33% ;
+    justify-content:space-evenly;
+    align-items: center;
+  }
+
+  .forecast-item{
+
+    width: 100%;
+
+    padding-top: 1rem;
+    justify-content: center;
+    text-align: center;
+  
+  }
   /*business cards section*/
 
   /*hero*/
-
+.hero-text a{
+  padding: 1rem;
+  height: 30px;
+  width: 100px;
+}
   .hero-image img {
     height: 30%;
   }
@@ -125,6 +151,10 @@
     margin: .4rem;
   }
 
+  /*Event */
+  .event{
+    text-align: left;
+  }
 
   /* Business spotlight */
   #BusinessCards {
@@ -133,3 +163,4 @@
     
   }
 }
+

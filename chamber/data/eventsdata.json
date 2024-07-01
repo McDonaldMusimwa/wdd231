@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Music Concert",
+      "venue": "Central Park Amphitheater",
+      "time": "19:00",
+      "description": "Join us for an evening of live music featuring various artists from around the world.",
+      "date": "2024-07-20"
+    },
+    {
+      "title": "Art Exhibition",
+      "venue": "Downtown Art Gallery",
+      "time": "15:00",
+      "description": "Experience the latest contemporary art pieces from local and international artists.",
+      "date": "2024-08-05"
+    }
+  ]

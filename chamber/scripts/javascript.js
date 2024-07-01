@@ -3,7 +3,11 @@ import { businessSpotlight } from "./spotlight.js";
 //import { FetchCurrentWeatherReport } from "./weather.js";
 
 //import { FetchWeatherForecastReport } from "./weather.js";
-//import { CreateWeatherCards } from "./utity.js";
+import {
+  RenderCurrentWeatherData,
+  RenderWeatherForecast,
+  RenderEvents,
+} from "./utity.js";
 
 /* Hamburger Menu*/
 const hamburger = document.querySelector("#burger-menu");
@@ -38,61 +42,120 @@ async function fetchBusiess() {
     const data = await response.json();
     const spotlight = data.slice(0, 3);
 
-    useBusinessData(data, businesSection);
-    businessSpotlight(spotlight);
+    if (data) {
+      useBusinessData(data, businesSection);
+      businessSpotlight(spotlight);
+    }
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }
 }
 fetchBusiess();
 
-async function fetchSpotBusiess() {
+async function fetchSpotBusiness() {
   try {
     const response = await fetch("data/members.json");
     const data = await response.json();
-    const spotlight = data.slice(0, 3);
+   // const spotlight = data.slice(0,2)
+    const spotlight = [];
+    for (let i = 0; i < data.length; i++) {
+      if (data[i].membershiplevel === "Gold") {
+       
+        spotlight.push(data[i]);
+      }
+    }
 
-    businessSpotlight(spotlight, business_cards);
+    businessSpotlight(spotlight.splice(0,3), business_cards);
   } catch (error) {
     console.error("Error fetching JSON:", error);
   }
 }
-fetchSpotBusiess();
+fetchSpotBusiness();
 
 /* switch directory display */
 const gridButton = document.getElementById("grid");
 const listButton = document.getElementById("list");
 const display = document.querySelector("article");
 
-gridButton.addEventListener("click", () => {
+gridButton?.addEventListener("click", () => {
   display.classList.add("grid");
   display.classList.remove("list");
 });
 
-listButton.addEventListener("click", () => {
+listButton?.addEventListener("click", () => {
   display.classList.add("list");
   display.classList.remove("grid");
 });
 
-/* Weather section and calls 
+/* Weather section and calls */
 const lat = 33.92;
 const lon = 18.42;
 const APIKEY = "72ed033637d24102f0b8d9c2285a5091";
-const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=33.92&lon=18.42&appid=72ed033637d24102f0b8d9c2285a5091`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${APIKEY}`;
 
 async function FetchCurrentWeatherReport(link) {
   try {
     const response = await fetch(link);
     const data = await response.json();
 
-    return JSON.stringify(data);
+    RenderCurrentWeatherData(data.list[0]);
+
+    const threedaysdata = (data) => {
+      const hours = 7;
+      const selected = [];
+      for (let i = 7; i < data.list.length; i += hours) {
+        selected.push(data.list[i]);
+      }
+   
+      return selected.slice(0,3);
+    };
+
+    RenderWeatherForecast(threedaysdata(data));
   } catch (error) {
     console.log(error);
   }
 }
+FetchCurrentWeatherReport(weatherUrl);
 
-const data = await FetchCurrentWeatherReport(weatherUrl);
-console.log("data: " + data);
-*/
+const weatherdata = {
+  coord: { lon: 18.42, lat: 33.92 },
+  weather: [{ id: 800, main: "Clear", description: "clear sky", icon: "01d" }],
+  base: "stations",
+  main: {
+    temp: 25.98,
+    feels_like: 25.98,
+    temp_min: 25.98,
+    temp_max: 25.98,
+    pressure: 1014,
+    humidity: 69,
+    sea_level: 1014,
+    grnd_level: 1014,
+  },
+  visibility: 10000,
+  wind: { speed: 2.7, deg: 305, gust: 2.85 },
+  clouds: { all: 0 },
+  dt: 1719818824,
+  sys: { sunrise: 1719805134, sunset: 1719856875 },
+  timezone: 3600,
+  id: 0,
+  name: "",
+  cod: 200,
+};
 
-console.log("i am here")
+
+/* Evnts */
+async function EventsRender() {
+  try {
+    const response = await fetch("data/eventsdata.json");
+    const data = await response.json();
+
+    data.forEach((event) => {
+      RenderEvents(event);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+EventsRender();
+
+console.log("i am here");
