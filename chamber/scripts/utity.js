@@ -15,7 +15,7 @@ function CreateCurrentWeatherCard(weather, temp) {
   description.innerHTML = weather.description;
 
   const icon = document.createElement("img");
-  const src = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
+  const src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
   icon.setAttribute('src',src); 
   icon.loading = "lazy";
   icon.alt = weather.main;
@@ -51,7 +51,7 @@ function RenderWeatherForecast(forecastList) {
     description.innerHTML = weatherData.weather[0].description;
 
     const icon = document.createElement("img");
-    icon.src = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
+    icon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
     icon.loading = "lazy";
     icon.alt = weatherData.weather[0].main;
 
