@@ -381,7 +381,10 @@ color: white;
   min-height: 80%;
  
 }
-
+.weather-section, .forecast-item, .event-item {
+  min-height: 150px; /* Reserve adequate space */
+  margin-bottom: 20px; /* Add margin to separate elements */
+}
 
 .forecast-item{
   border-radius: 8px;

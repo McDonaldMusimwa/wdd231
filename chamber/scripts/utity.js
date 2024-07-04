@@ -54,6 +54,8 @@ function RenderWeatherForecast(forecastList) {
     icon.src = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`;
     icon.className="weatherimage"
     icon.loading = "lazy";
+    icon.height="100";
+    icon.width="100";
     icon.alt = weatherData.weather[0].main;
 
     div.appendChild(city)
