@@ -234,7 +234,7 @@ section {
 }
 
 section h3 {
-  font-size: 1.5rem;
+  font-size: .8rem;
 }
 
 section p {
@@ -402,4 +402,9 @@ color: white;
 }
 .event h4 {
   margin-bottom: 15px; /* Adjust the value as needed for more or less space */
+}
+
+#home ,#Featured{
+  margin: 2rem 0;
+  font-size: 130%;
 }

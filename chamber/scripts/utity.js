@@ -18,6 +18,8 @@ function CreateCurrentWeatherCard(weather, temp) {
   const src = `https://openweathermap.org/img/wn/${weather.icon}@2x.png`;
   icon.setAttribute('src',src); 
   icon.loading = "lazy";
+  icon.height="100";
+  icon.width="100";
   icon.alt = weather.main;
 
 
