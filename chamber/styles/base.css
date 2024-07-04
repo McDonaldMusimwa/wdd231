@@ -361,6 +361,11 @@ color: white;
 }
 
 /* Style the weather cards */
+.weatherimage{
+  object-fit:contain;
+  width: 30%;
+  height: 30%;
+}
 #weatherfocust{
   display: grid;
   flex-direction: column;
@@ -376,11 +381,7 @@ color: white;
   min-height: 80%;
  
 }
-.currentWeather img{
-  object-fit:contain;
-  width: 30%;
-  height: 20%;
-}
+
 
 .forecast-item{
   border-radius: 8px;

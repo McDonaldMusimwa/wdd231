@@ -47,7 +47,7 @@ async function fetchBusiess() {
       businessSpotlight(spotlight);
     }
   } catch (error) {
-    console.error("Error fetching JSON:", error);
+    //console.error("Error fetching JSON:", error);
   }
 }
 fetchBusiess();
