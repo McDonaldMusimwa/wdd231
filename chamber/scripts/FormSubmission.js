@@ -1,4 +1,4 @@
-import { rendernewUser } from "./thankyou.js";
+//import { rendernewUser } from "./thankyou.js";
 
 async function joinSubmission() {
   const fistname = document.getElementById("firstname").value || " ";
@@ -26,25 +26,10 @@ async function joinSubmission() {
     timestamp: timestamp,
   };
 
-  //localStorage.setItem("userData", JSON.stringify(user));
-  //const querystring = new URLSearchParams(user).toString();
-
-
-  /*
-  document.addEventListener("DOMContentLoaded", () => {
-    const userData = localStorage.getItem("userData");
-    console.log(userData)
-    if (userData) {
-      const user = JSON.parse(userData);
-      console.log(user)
-      rendernewUser(user);
-    } else {
-      console.error("No user data found in localStorage.");
-    }
-  });
-*/
+  localStorage.setItem("userData", JSON.stringify(user));
+ 
   window.location.href = `thankyou.html`;
-  rendernewUser(user)
+  //rendernewUser(user)
 }
 
 export { joinSubmission };

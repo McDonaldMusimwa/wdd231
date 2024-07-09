@@ -163,7 +163,7 @@ EventsRender();
 
 async function MemberShip() {
   try {
-    const response = await fetch("data/membershipLevels.json");
+    const response = await fetch("data/membershiplevels.json");
     const data = await response.json();
     RenderMembershipLevels(data);
   } catch (error) {
