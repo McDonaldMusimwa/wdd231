@@ -1,0 +1,48 @@
+[
+  {
+    "value": "Np-membership",
+    "title": "NP Membership",
+    "intro":"NP Membership provides basic access to our platfirm",
+    "description": ", including limited content and features suitable for casual users.",
+    "cost":100,
+    "perks":[
+      "1 yearly meetings "
+    ]
+  },
+  {
+    "value": "Bronze-Membership",
+    "title": "Bronze Membership",
+    "intro":"Bronze Membership offers standard access with additional features",
+    "description": " such as extended content availability, basic support, and occasional promotions.",
+    "cost":200,
+    "perks":[
+      "2 yearly meetings ",
+      "champer consultation"
+    ]
+  },
+  {
+    "value": "Silver-Membership",
+    "title": "Silver Membership",
+    "intro":"Silver Membership includes enhanced access to premium content",
+    "description": ", priority support, exclusive discounts, and early access to new features.",
+    "cost":300,
+    "perks":[
+      "4 yearly meetings ",
+      "champer consultation",
+      "Membership Discounts"
+    ]
+  },
+  {
+    "value": "Gold-Membership",
+    "title": "Gold Membership",
+    "intro":"Gold Membership grants full access to all platform features,",
+    "description": " including unlimited content, priority support with dedicated account management, exclusive member events, and special offers.",
+    "cost":400,
+    "perks":[
+      "4 yearly meetings ",
+      "champer consultation",
+      "Membership Discounts",
+      "Free Business consultation"
+    ]
+  }
+]

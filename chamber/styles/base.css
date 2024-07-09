@@ -23,7 +23,7 @@ main {
   flex-direction: column;
 }
 
-.logocontainer>h2 {
+.logocontainer > h2 {
   font-size: 25px;
 }
 
@@ -105,7 +105,7 @@ footer {
   align-items: center;
 }
 
-header>h1 {
+header > h1 {
   font-size: 0.5rem;
 }
 
@@ -153,8 +153,8 @@ main {
   justify-content: space-between;
   border-bottom: 1px black solid;
 
-  padding: .5rempx;
-  margin: .5rem;
+  padding: 0.5rempx;
+  margin: 0.5rem;
 }
 
 .logoSide {
@@ -162,7 +162,7 @@ main {
   flex-direction: column;
 }
 
-.logoSide>img {
+.logoSide > img {
   width: 100%;
   height: 50%;
   margin-bottom: 15px;
@@ -196,7 +196,7 @@ section {
   box-shadow: 0 0 10px #333;
 }
 
-.grid section>* {
+.grid section > * {
   margin: 0.1rem;
 }
 
@@ -215,7 +215,7 @@ section {
   margin: 0;
 }
 
-.list section>* {
+.list section > * {
   margin: 0 1rem;
 }
 
@@ -234,7 +234,7 @@ section {
 }
 
 section h3 {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 section p {
@@ -244,12 +244,12 @@ section p {
 
 section a {
   text-decoration: none;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: black;
   letter-spacing: 1.1pt;
   border: 1px solid navy;
-  margin: .5rem;
-  padding: .5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 /* Hero image*/
@@ -287,7 +287,6 @@ section a {
   background-color: #e0e1e2a9;
   text-align: center;
   cursor: pointer;
-
 }
 
 .hero-text a:hover {
@@ -334,41 +333,38 @@ section a {
 }
 
 .BusinessSpotLight_Bottom {
-
   padding: 2%;
   display: flex;
   flex-direction: row;
 }
-.BusinessSpotLight_Bottom img{
-  object-fit:contain;
+.BusinessSpotLight_Bottom img {
+  object-fit: contain;
   width: 30%;
   height: 20%;
 }
 .BusinessSpotLight_Bottom div {
-
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 5px;
-
 }
 
-.BusinessSpotLight_Bottom div a:hover{
-background-color: black;
-color: white;
+.BusinessSpotLight_Bottom div a:hover {
+  background-color: black;
+  color: white;
 }
 
 /* Style the weather cards */
-.weatherimage{
-  object-fit:contain;
+.weatherimage {
+  object-fit: contain;
   width: 30%;
   height: 30%;
 }
-#weatherfocust{
+#weatherfocust {
   display: grid;
   flex-direction: column;
 }
-.column div{
+.column div {
   text-align: center;
   border-radius: 8px;
 
@@ -377,14 +373,15 @@ color: white;
 
   margin: 0.5rem 0;
   min-height: 80%;
- 
 }
-.weather-section, .forecast-item, .event-item {
+.weather-section,
+.forecast-item,
+.event-item {
   min-height: 150px; /* Reserve adequate space */
   margin-bottom: 20px; /* Add margin to separate elements */
 }
 
-.forecast-item{
+.forecast-item {
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 250px;
@@ -392,10 +389,9 @@ color: white;
   padding-top: 1rem;
   justify-content: center;
   text-align: center;
-
 }
-.forecast-item p{
-  margin: 15px 0 ;
+.forecast-item p {
+  margin: 15px 0;
 }
 .event p {
   margin-bottom: 10px; /* Adjust the value as needed for more or less space */
@@ -404,7 +400,155 @@ color: white;
   margin-bottom: 15px; /* Adjust the value as needed for more or less space */
 }
 
-#home ,#Featured{
+#home,
+#Featured {
   margin: 2rem 0;
   font-size: 130%;
+}
+
+/* FORM */
+#more {display: none;}
+#ModalArea{
+  border: solid 1px;
+  background-color: var(--background);
+  width: 80vw;
+  max-width: 80%;
+  min-width: 50%;
+  margin: 5% ;
+  padding: 1em;
+
+
+}
+
+
+
+form {
+
+  border: solid 1px;
+  background-color: var(--background);
+  width: 80vw;
+  max-width: 80%;
+  min-width: 50%;
+  margin: 5% ;
+  padding: 1em;
+
+ 
+}
+fieldset {
+  border: none;
+  padding: 2rem 0;
+}
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 1.5em;
+}
+input,
+textarea {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+input,
+select {
+  border-radius: 3px;
+}
+.inline {
+  width: unset;
+  vertical-align: middle;
+  margin: 0 0.5em 0 0;
+}
+label{
+  text-align: left;
+}
+input[type="submit"] {
+  min-width: 100px;
+  max-width: 300px;
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1em;
+  background-color: #04aa6d;
+}
+
+.container {
+  margin: 50em 274em 0 274em;
+}
+
+.header {
+  padding: 0 10em 0 10em;
+  margin: 0 0 1.5em 0;
+}
+#title {
+  margin: 2em 0 0 0;
+}
+#description {
+  margin: 0.5em;
+}
+
+.membership-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+ border-bottom: 1px black solid;
+background-color: var(--background);
+  margin: .1rem 0;
+  padding: 4%;
+  font-size: 1rem;
+}
+.membership-card h3 h5{
+  margin: 8px;
+}
+.membership-card h5{
+  margin: 8px;
+}
+/* modal*/
+::backdrop {
+background-color: #6a6b6bc6;
+  opacity: 0.75;
+}
+
+dialog{
+  margin: 5%;
+  width: 80%;
+  height: 85%;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+#membership-levels{
+  display: flex;
+  flex-direction: column;
+}
+.perks-list{
+  margin: 10px 10px;
+}
+#Thankyou{
+  margin: 2% auto;
+
+}
+
+#memberinfo{
+  margin: 10% 10%;
+}
+
+
+@media (min-width: 600px) {
+  form {
+    width: 80%; /* Increase width for larger screens */
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    width: 70%; /* Increase width for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  form {
+    width: 60%; /* Increase width for larger screens */
+  }
 }

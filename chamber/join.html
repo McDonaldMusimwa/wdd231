@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Busy Corner" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.example.com/image.jpg" />
+    <meta property="og:url" content="https://www.example.com/page-url" />
+    <meta
+      property="og:description"
+      content="Busy Corner is a group of business that seek to nertwork and bring ease of business"
+    />
+    <meta
+      name="description"
+      content="Busy Corner is a group of business that seek to nertwork and bring ease of business"
+    />
+
+    <meta property="og:site_name" content="Busy Corner" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="author" content="McDonald Musimwa" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+
+    <link rel="icon" href="images/svg/logo-black.svg" type="image/x-icon" />
+    <style>
+      /* Inline critical CSS */
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 1em;
+      }
+    </style>
+    <title>Busy Corner chamber of commerce</title>
+    <!--
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
+    <link
+      rel="stylesheet"
+      href="styles/base.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="styles/large.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <script defer src="scripts/javascript.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="topnav">
+        <div class="logocontainer">
+          <img
+            id="logo"
+            src="./images/svg/logo-no-background.svg"
+            alt="busy corner logo"
+          />
+          <h1>Chamber of Commerce</h1>
+        </div>
+
+        <div id="burger-menu" class="burger-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <nav class="topnav">
+        <ul class="nav_menu">
+          <li><a href="/chamber/index.html">Home</a></li>
+          <li class="nav_item">
+            <a class="nav_link" href="directory.html">Discover</a>
+          </li>
+          <li class="nav_item">
+            <a href="./directory.html" class="nav_link">Directory</a>
+          </li>
+          <li class="nav_item">
+            <a href="./join.html" class="nav_link">Join</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="ModalArea">
+        <h4>Join the Chamber of Commerce</h4>
+        <p>Busy Corner is an alliance of local business that seeks the ease of doing business.We have different membership levels ,feel free to learn more <span id="dots">...</span> </p>
+       
+        <dialog>
+          <button autofocus id="closeModal">Close</button>
+     <h5>Membership Levels</h5>
+          <div id="membership-levels"></div>
+            
+         </dialog> 
+         <button id="openModal">Read more</button>
+        </div>
+     
+        <form id="join-form" action="thankyou.html"  autocomplete="on">
+            <fieldset>
+              <label id="name-label">First Name <input id="firstname" type="text" title="Please enter firstname" name="firstname" placeholder="Enter your firstname" autocomplete="given-name" required/></label>
+              <label id="name-label">Last Name <input id="lastname" type="text" tabindex="Please enter lastname" name="lastname" placeholder="Enter your lastname" autocomplete="family-name" required/></label>
+              <label id="name-organization-title">Organational Title   <input 
+                placeholder="Enter Organizational title"
+                type="text" 
+                id="organization-title" 
+                name="organization-title" 
+                autocomplete="organization-title" 
+           
+                title="Please enter a valid organizational title with at least seven characters. Only alphabetic characters, hyphens, and spaces are allowed."
+                required
+            ></label>
+              <label id="email-label">Email <input id="email" type="email" name="email" title="Please enter email" placeholder="Enter your Email" required  autocomplete="email"/></label>
+              <label id="number-label">Phone <input id="phone" type="telephone" name="phone"
+              placeholder="Enter Phone number"
+              required autocomplete="mobile"/></label>
+              
+              <label id="organizationname">Name of Organization <input id="organization" type="text" name="organization" title="Please enter or organization name" placeholder="Enter organization name" autocomplete="organization"/></label>
+              <label>Choose membership level:
+                <select id="dropdown" name="membership-levels">
+                  <option value="">Select membership</option>
+                  <option value="Np-membership">NP Membership R100.00</option>
+                  <option value="Bronze-Membership">Bronze Membership R200.00</option>
+                  <option value="Silver-Membership">Silver Membership R300.00</option>
+                  <option value="Gold-Membership">Gold Membership R400.00</option>
+                  
+                </select>
+              </label>
+            </fieldset>
+        
+              <fieldset>
+                <label for="organization-description">Organization Description:</label><br>
+                <textarea 
+                    id="organizationdescription" 
+                    name="organization-description" 
+                    rows="4" 
+                    cols="50" 
+                    placeholder="Enter business/organization description here..."
+                    required
+                ></textarea><br><br>
+                
+              
+                <input 
+                    type="hidden" 
+                    id="timestamp" 
+                    name="timestamp" 
+                    value=""
+                ><br><br>
+                
+                <input 
+                id="submitBtn"
+                    type="submit" 
+                    value="Join Now"
+                >
+           </form>
+          
+    </main>
+    <footer>
+      <p>
+        ©<span id="currentyear"> </span>🤖 McDonald Musimwa 🤖 Course WDD231 🤖
+        South Africa
+      </p>
+
+      <p id="lastmodified"></p>
+    </footer>
+  </body>
+</html>

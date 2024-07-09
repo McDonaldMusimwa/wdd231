@@ -1,5 +1,10 @@
 import { useBusinessData } from "./rendercards.js";
 import { businessSpotlight } from "./spotlight.js";
+import { RenderMembershipLevels } from "./membershiplevels.js";
+import { ModalFunctionality } from "./modal.js";
+import { joinSubmission } from "./FormSubmission.js";
+//import { rendernewUser } from "./thankyou.js";
+
 //import { FetchCurrentWeatherReport } from "./weather.js";
 
 //import { FetchWeatherForecastReport } from "./weather.js";
@@ -56,18 +61,17 @@ async function fetchSpotBusiness() {
   try {
     const response = await fetch("data/members.json");
     const data = await response.json();
-   // const spotlight = data.slice(0,2)
+    // const spotlight = data.slice(0,2)
     const spotlight = [];
     for (let i = 0; i < data.length; i++) {
       if (data[i].membershiplevel === "Gold") {
-       
         spotlight.push(data[i]);
       }
     }
 
-    businessSpotlight(spotlight.splice(0,3), business_cards);
+    businessSpotlight(spotlight.splice(0, 3), business_cards);
   } catch (error) {
-    console.error("Error fetching JSON:", error);
+    //console.error("Error fetching JSON:", error);
   }
 }
 fetchSpotBusiness();
@@ -106,8 +110,8 @@ async function FetchCurrentWeatherReport(link) {
       for (let i = 7; i < data.list.length; i += hours) {
         selected.push(data.list[i]);
       }
-   
-      return selected.slice(0,3);
+
+      return selected.slice(0, 3);
     };
 
     RenderWeatherForecast(threedaysdata(data));
@@ -142,7 +146,6 @@ const weatherdata = {
   cod: 200,
 };
 
-
 /* Evnts */
 async function EventsRender() {
   try {
@@ -158,4 +161,29 @@ async function EventsRender() {
 }
 EventsRender();
 
+async function MemberShip() {
+  try {
+    const response = await fetch("data/membershipLevels.json");
+    const data = await response.json();
+    RenderMembershipLevels(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+ModalFunctionality();
+MemberShip();
+
+/* form submission*/
+
+let formdata = document.getElementById("join-form");
+if (formdata) {
+  formdata.addEventListener("submit", (event) => {
+    event.preventDefault();
+    joinSubmission();
+
+    
+     
+    
+  });
+}
 console.log("i am here");

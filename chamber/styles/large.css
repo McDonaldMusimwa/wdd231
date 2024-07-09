@@ -162,5 +162,48 @@ align-items: center;
     grid-template-columns: 33.33% 33.3% 33.3%;
     
   }
+
+  /*membership levels*/
+  #ModalArea{
+    margin:1% auto;
+    width: 50%;
+  }
+
+  
+
+  #closeModal{
+    margin: 2%;
+
+  }
+  form {
+    border:solid 1px;
+
+    width: 60vw;
+    max-width: 50%;
+    min-width: 300px;
+    margin:2% auto
+    
+}
+  #membership-levels{
+    display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+    gap: .2%;
+    padding: 5%;
+  
+  }
+
+  #membership-levels>div{
+    width: 80%;
+  }
+  .membership-card:hover{
+    background-color: var(--white);
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  #memberinfo{
+    margin: 0 40%;
+  }
+  
 }
 
