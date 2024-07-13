@@ -1,4 +1,4 @@
-@media only screen and (min-width:64rem) {
+@media only screen and (min-width: 64rem) {
   * {
     margin: 0;
     font-size: 100%;
@@ -52,13 +52,11 @@
     padding: 0.5rem 0.5rem;
   }
 
-
   .burger-menu {
     display: none;
   }
 
   .list section {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -91,68 +89,65 @@
     flex-direction: row;
   }
 
-  .grid section .logoSide>img {
+  .grid section .logoSide > img {
     width: 80%;
     height: 100%;
     margin-bottom: 15px;
     margin-left: 20px;
   }
 
-  .list section .logoSide>img {
+  .list section .logoSide > img {
     width: 50%;
     height: 100%;
     margin-bottom: 15px;
     margin-left: 20px;
   }
 
-
   /* westher section */
   .weather-section {
     display: grid;
     grid-template-columns: 39% 20% 40%;
-    gap: .5%;
+    gap: 0.5%;
   }
 
-  #currentWeather{
-justify-content: center;
-align-items: center;
-  }
-
-  #weatherfocust{
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33% ;
-    justify-content:space-evenly;
+  #currentWeather {
+    justify-content: center;
     align-items: center;
   }
 
-  .forecast-item{
+  #weatherfocust {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
+  .forecast-item {
     width: 100%;
 
     padding-top: 1rem;
     justify-content: center;
     text-align: center;
-  
   }
   /*business cards section*/
 
   /*hero*/
-.hero-text a{
-  padding: 1rem;
-  height: 30px;
-  width: 100px;
-}
+  .hero-text a {
+    padding: 1rem;
+    height: 30px;
+    width: 100px;
+  }
   .hero-image img {
     height: 30%;
   }
 
   .card {
     padding: 0.1rem;
-    margin: .4rem;
+    margin: 0.4rem;
   }
 
   /*Event */
-  .event{
+  .event {
     text-align: left;
   }
 
@@ -160,50 +155,79 @@ align-items: center;
   #BusinessCards {
     display: grid;
     grid-template-columns: 33.33% 33.3% 33.3%;
-    
   }
 
   /*membership levels*/
-  #ModalArea{
-    margin:1% auto;
+  #ModalArea {
+    margin: 1% auto;
     width: 50%;
   }
 
-  
-
-  #closeModal{
+  #closeModal {
     margin: 2%;
-
   }
   form {
-    border:solid 1px;
+    border: solid 1px;
 
     width: 60vw;
     max-width: 50%;
     min-width: 300px;
-    margin:2% auto
-    
-}
-  #membership-levels{
+    margin: 2% auto;
+  }
+  #membership-levels {
     display: grid;
-    grid-template-columns:25% 25% 25% 25%;
-    gap: .2%;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 0.2%;
     padding: 5%;
-  
   }
 
-  #membership-levels>div{
+  #membership-levels > div {
     width: 80%;
   }
-  .membership-card:hover{
+  .membership-card:hover {
     background-color: var(--white);
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
-  #memberinfo{
+  #memberinfo {
     margin: 0 40%;
   }
-  
+  /* discover*/
+  #discoverdata ,#discoverimages{
+    text-align: center;
+    align-items: center;
+  }
+  #discovergrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    margin: 0.5rem 15%;
+height: 100%;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+  }
+  #discovergrid > div {
+    flex: 1 1 calc(33.333% - 1rem);
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  .discoverimage {
+    width: 50%;
+    height: 30%;
+    object-fit: cover;
+  }
+  #demographics,
+  #investment-forums {
+    object-fit: cover;
+    width: 40%;
+    margin-top: 1rem;
+    padding: 20px;
+  }
 }
-

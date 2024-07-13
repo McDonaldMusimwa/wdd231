@@ -13,6 +13,7 @@ import {
   RenderWeatherForecast,
   RenderEvents,
 } from "./utity.js";
+import { discoverImages } from "./discover.js";
 
 /* Hamburger Menu*/
 const hamburger = document.querySelector("#burger-menu");
@@ -180,10 +181,40 @@ if (formdata) {
   formdata.addEventListener("submit", (event) => {
     event.preventDefault();
     joinSubmission();
+  });
+}
 
-    
-     
-    
+/* discover image*/
+async function renderdiscoverpageimages() {
+  try {
+    const response = await fetch("data/discover.json");
+    const data = await response.json();
+    discoverImages(data);
+  } catch (error) {
+    error;
+  }
+}
+renderdiscoverpageimages();
+const images = document.querySelectorAll(".discoverimage");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach((image) => {
+    observer.observe(image);
+  });
+} else {
+  // Fallback for browsers that do not support IntersectionObserver
+  images.forEach((image) => {
+    image.src = image.dataset.src;
   });
 }
 console.log("i am here");

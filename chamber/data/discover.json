@@ -1,0 +1,11 @@
+[
+  {
+    "image": "./images/chapman.jpg",
+    "alt": "chapman`s pick drive"
+  },
+  { "image": "./images/v&a.jpg", "alt": "waterfront" },
+  {
+    "image": "./images/sunset.jpg",
+    "alt": "table mountain sunset"
+  }
+]

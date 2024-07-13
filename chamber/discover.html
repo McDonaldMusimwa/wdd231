@@ -40,39 +40,7 @@
         text-align: center;
         padding: 1em;
       }
-
-      label{
-        display: block;
-      }
     </style>
-    <script>
-     document.addEventListener("DOMContentLoaded", () => {
-  const userData = localStorage.getItem("userData");
-
-  if (userData) {
-    const user = JSON.parse(userData); // Parse the JSON string into a JavaScript object
-    rendernewUser(user);
-  } else {
-    console.error("No user data found in localStorage.");
-  }
-});
-      
-
-      function rendernewUser(user) {
-        console.log(user.firstname)
-  document.querySelector(".userfirstname").innerHTML = user.firstname || "";
-  document.querySelector(".userlastname").innerHTML = user.lastname || "";
-  document.querySelector(".userphone").innerHTML = user.phone || "";
-  document.querySelector(".useremail").innerHTML = user.email || "";
-  document.querySelector(".usertitle").innerHTML = user.organisationtitle || "";
-  document.querySelector(".userorganization").innerHTML = user.organisationname || "";
-  document.querySelector(".userdescription").innerHTML = user.organisationdescription || "";
-  document.querySelector(".usermembership").innerHTML = user.membership || "";
-  document.querySelector(".usertimestamp").innerHTML = user.timestamp || "";
-}
-
-    </script>
-
     <title>Busy Corner chamber of commerce</title>
     <!--
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -125,24 +93,50 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <div id="Thankyou" class="card">
-        <h3>Thank for deciding to join Us</h3>
-        <div id="memberinfo">
-          <label>First Name :<span class="userfirstname"></span></label>
-          <label>Last Name :<span class="userlastname"></span></label>
-          <label>Title : <span class="usertitle"></span></label>
-          <label>Phone :<span class="userphone"></span></label>
-          <label>Email :<span class="useremail"></span></label>
-          <label>Organization :<span class="userorganization"></span></label>
-          <label><span class="userdescription"></span></label>
-          <label>Membership Level :<span class="usermembership"></span></label>
-          <label>Date Joined :<span class="usertimestamp"></span></label>
-     
-          
-      </div>
-
-          <h4>We will get back to you shortly.</h4>
+    <main id="discovergrid">
+      <div id="discoverimages"></div>
+      <div id="discoverdata">
+        
+          <div id="google-calendar">
+            <h2>Google Calendar</h2>
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone"
+              style="border: 0"
+              width="100%"
+              height="400"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+          <div id="demographics" >
+            <h2>Demographics</h2>
+            <ul>
+              <li>Population: 1,000,000</li>
+              <li>Median Age: 35 years</li>
+              <li>Average Household Income: $50,000</li>
+              <li>Employment Rate: 95%</li>
+              <li>Major Industries: Technology, Healthcare, Education</li>
+            </ul>
+          </div>
+          <div id="investment-forums">
+            <h2>Investment Forums and Events</h2>
+            <ul>
+              <li>
+                <strong>Forum 1</strong> - Date: 01/08/2024
+                <br><em>Event Title:</em> Cape Town Startup Summit
+              </li>
+              <li>
+                <strong>Forum 2</strong> - Date: 15/08/2024
+                <br><em>Event Title:</em> Cape Town Tech Expo
+              </li>
+              <li>
+                <strong>Forum 3</strong> - Date: 30/08/2024
+                <br><em>Event Title:</em> Cape Town Investment Forum
+              </li>
+            </ul>
+          </div>
+        
+        </div>
     </main>
     <footer>
       <p>

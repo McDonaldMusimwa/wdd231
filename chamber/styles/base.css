@@ -162,7 +162,8 @@ main {
   flex-direction: column;
 }
 
-.logoSide > img {
+.logoSide > img 
+{
   width: 100%;
   height: 50%;
   margin-bottom: 15px;
@@ -534,7 +535,17 @@ dialog{
   margin: 10% 10%;
 }
 
-
+/* discover*/
+#discovergrid,#discoverimages,#discoverdata{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.discoverimage{
+  width: 100%;
+  height: 50%;
+  object-fit:contain;
+}
 @media (min-width: 600px) {
   form {
     width: 80%; /* Increase width for larger screens */
