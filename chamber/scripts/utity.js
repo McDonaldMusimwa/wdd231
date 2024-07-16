@@ -23,11 +23,11 @@ function CreateCurrentWeatherCard(weather, temp) {
   icon.alt = weather.main;
 
 
-  currentWeather.appendChild(city);
-  currentWeather.appendChild(description);
-  currentWeather.appendChild(icon);
+  currentWeather?.appendChild(city);
+  currentWeather?.appendChild(description);
+  currentWeather?.appendChild(icon);
 
-  currentWeather.appendChild(temperature);
+  currentWeather?.appendChild(temperature);
 }
 
 function RenderWeatherForecast(forecastList) {
@@ -66,7 +66,7 @@ function RenderWeatherForecast(forecastList) {
     div.appendChild(icon);
 
     div.appendChild(temperature);
-    forecastContainer.appendChild(div);
+    forecastContainer?.appendChild(div);
   });
 }
 
@@ -91,7 +91,7 @@ function RenderEvents(event) {
   div.appendChild(date);
   div.appendChild(time);
 
-  container.appendChild(div);
+  container?.appendChild(div);
 }
 function RenderCurrentWeatherData(weatherList) {
   const Currentweather = weatherList.weather[0]; // Extract weather info

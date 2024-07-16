@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+    as="style"
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
@@ -94,20 +95,40 @@
       </nav>
     </header>
     <main id="discovergrid">
-      <div id="discoverimages"></div>
-      <div id="discoverdata">
+      <div id="discoverimages">
+        <figure>
+          <img data-src="./images/chapman.jpg" alt="chapman's pick drive" class="discoverimage">
+          <figcaption>Chapman's Pick Drive</figcaption>
+        </figure>
         
-          <div id="google-calendar">
-            <h2>Google Calendar</h2>
-            <iframe
-              src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone"
-              style="border: 0"
-              width="100%"
-              height="400"
-              frameborder="0"
-              scrolling="no"
-            ></iframe>
-          </div>
+        <figure>
+          <img data-src="./images/v&a.jpg" alt="waterfront" class="discoverimage" loading="lazy">
+          <figcaption>Waterfront</figcaption>
+        </figure>
+        
+        <figure>
+          <img data-src="./images/sunset.jpg" alt="table mountain sunset" class="discoverimage">
+          <figcaption>Table Mountain Sunset</figcaption>
+        </figure>
+        
+        <figure>
+          <img data-src="./images/cptstadium.jpg" alt="capetown stadium" class="discoverimage">
+          <figcaption>Capetown Stadium</figcaption>
+        </figure>
+        
+        <figure>
+          <img data-src="./images/topoftable.jpg" alt="top of table mountain" class="discoverimage">
+          <figcaption>Top of Table Mountain</figcaption>
+        </figure>
+        
+        <figure>
+          <img data-src="./images/george.jpg" alt="george godge" class="discoverimage">
+          <figcaption>George Godge</figcaption>
+        </figure>
+        
+      </div>
+      <div id="discoverdata">
+
           <div id="demographics" >
             <h2>Demographics</h2>
             <ul>
@@ -135,7 +156,18 @@
               </li>
             </ul>
           </div>
-        
+                  
+          <div id="google-calendar">
+            <h2>Google Calendar</h2>
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=your_time_zone"
+              style="border: 0"
+              width="100%"
+              height="400"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
         </div>
     </main>
     <footer>

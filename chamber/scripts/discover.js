@@ -1,15 +1,19 @@
-function discoverImages(array) {
-    const discoverImages = document.getElementById("discoverimages");
-
-    array.forEach(element => {
-        const image = document.createElement("img");
-        image.src = element.image;
-        image.alt = element.alt;
-        image.className = "discoverimage";
-        image.loading = "lazy"; // Lazy loading attribute
-        image.caption = `${element.alt}`;
-        discoverImages.appendChild(image);
-    });
+function preloadImage(img) {
+    const src = img.getAttribute("data-src");
+    if (!src) { return }
+    img.src = src
 }
+const imgOptions = {}
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
 
-export { discoverImages };
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            imgObserver.unobserve(entry.target);
+        }
+    })
+}, imgOptions)
+
+export { imgObserver }

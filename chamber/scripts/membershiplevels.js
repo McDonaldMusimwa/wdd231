@@ -25,7 +25,7 @@ function RenderMembershipLevels(members) {
     element.perks.forEach((perk) => {
       const li = document.createElement("li");
       li.innerHTML = perk;
-      perksList.appendChild(li);
+      perksList?.appendChild(li);
     });
     
 
@@ -36,7 +36,7 @@ function RenderMembershipLevels(members) {
     cardContainer.appendChild(br)
     cardContainer.appendChild(perksList)
 
-    membershipcardsContainer.appendChild(cardContainer);
+    membershipcardsContainer?.appendChild(cardContainer);
   });
 }
 

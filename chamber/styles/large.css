@@ -15,6 +15,16 @@
     height: 40%;
   }
 
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 50;
+    width: 250px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  }
   header {
     display: flex;
     flex-direction: row;
@@ -202,7 +212,7 @@
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 10px;
-    margin: 0.5rem 15%;
+    margin: 0.5rem 5%;
 height: 100%;
     padding: 1rem;
     flex-wrap: wrap;
@@ -219,9 +229,18 @@ height: 100%;
     overflow-y: auto;
   }
   .discoverimage {
-    width: 50%;
-    height: 30%;
+    width: 100%;
+    height: 90%;
     object-fit: cover;
+  }
+  .discoverimage:hover{
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    opacity: .8;
+  }
+  figure{
+    margin: 5px auto;
+    padding: auto;
+    object-fit: fill;
   }
   #demographics,
   #investment-forums {
@@ -229,5 +248,8 @@ height: 100%;
     width: 40%;
     margin-top: 1rem;
     padding: 20px;
+  }
+  #demographics>h2, #investment-forums>h2{
+    border-bottom: #0c0c0c solid 2px;
   }
 }

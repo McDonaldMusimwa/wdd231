@@ -3,9 +3,24 @@
     "image": "./images/chapman.jpg",
     "alt": "chapman`s pick drive"
   },
-  { "image": "./images/v&a.jpg", "alt": "waterfront" },
+  {
+    "image": "./images/v&a.jpg",
+    "alt": "waterfront"
+  },
   {
     "image": "./images/sunset.jpg",
     "alt": "table mountain sunset"
+  },
+  {
+    "image": "./images/cptstadium.jpg",
+    "alt": "capetown stadium"
+  },
+  {
+    "image": "./images/topoftable.jpg",
+    "alt": "top of table mountain"
+  },
+  {
+    "image": "./images/george.jpg",
+    "alt": "george godge"
   }
 ]
