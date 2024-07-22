@@ -191,5 +191,20 @@ images.forEach(image => {
   imgObserver.observe(image)
 })
 displayVisitorMessage();
-console.log(images)
+
 console.log("i am here");
+
+
+let array1 = [1, 2, 8, 20]
+let array2 = [2, 3, 8]
+
+function combinearrays(array1, array2) {
+
+  for (let i = 0; ai < array1.length; i++) {
+    for (let z = 0; z < array2.length; z++) {
+      array1[i]
+    }
+  }
+
+  return array1
+}

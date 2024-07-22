@@ -584,3 +584,71 @@ dialog{
   border: 1px solid #ccc;
   margin-bottom: 10px;
 }
+
+/* FORM */
+#more {display: none;}
+#ModalArea{
+  border: solid 1px;
+  background-color: var(--background);
+  width: 80vw;
+  max-width: 80%;
+  min-width: 50%;
+  margin: 5% ;
+  padding: 1em;
+
+
+}
+
+
+
+form {
+
+  border: solid 1px;
+  background-color: var(--background);
+  width: 80vw;
+  max-width: 80%;
+  min-width: 50%;
+  margin: 5% ;
+  padding: 1em;
+
+ 
+}
+fieldset {
+  border: none;
+  padding: 2rem 0;
+}
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 1.5em;
+}
+input,
+textarea {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
+}
+input,
+select {
+  border-radius: 3px;
+}
+.inline {
+  width: unset;
+  vertical-align: middle;
+  margin: 0 0.5em 0 0;
+}
+label{
+  text-align: left;
+}
+input[type="submit"] {
+  min-width: 100px;
+  max-width: 300px;
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1em;
+  background-color: #04aa6d;
+}
