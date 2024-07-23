@@ -18,7 +18,7 @@
   .sidebar {
     position: fixed;
     right: 0;
-    top: 50;
+    top: 50px;
     width: 250px;
     padding: 10px;
     background-color: #f4f4f4;
@@ -120,7 +120,7 @@
     gap: 0.5%;
   }
   .weather-section .column {
-    padding: 10px;
+    
     background: #f9f9f9;
     border: 1px solid #ddd;
     margin-bottom: 20px;
@@ -156,7 +156,7 @@
   }
   .hero-image img {
     width: 100%; /* or a specific value */
-    height: auto; /* or a specific value */
+    height: 70vh; /* or a specific value */
     display: block; /* Avoid default inline image spacing */
   }
 
@@ -248,7 +248,7 @@ height: 100%;
   }
   figure{
     margin: 5px auto;
-    padding: auto;
+    padding: 2px;
     object-fit: fill;
   }
   #demographics,

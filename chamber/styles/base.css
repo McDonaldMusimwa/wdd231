@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --background: #cadff5;
   --white: #ffffff;
@@ -153,7 +154,7 @@ main {
   justify-content: space-between;
   border-bottom: 1px black solid;
 
-  padding: 0.5rempx;
+  padding: 0.5rem;
   margin: 0.5rem;
 }
 
@@ -329,8 +330,7 @@ section a {
   width: 100%;
   display: block;
   margin-bottom: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+ padding-top: 10px;
 }
 
 .BusinessSpotLight_Bottom {
@@ -381,10 +381,12 @@ section a {
   min-height: 150px; /* Reserve adequate space */
   margin-bottom: 20px; /* Add margin to separate elements */
 }
-
+#currentWeather >img{
+  height: 100px;
+  width: 100px;
+}
 .forecast-item {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
   height: 250px;
   margin-top: 0.5rem;
   padding-top: 1rem;
@@ -626,7 +628,7 @@ select {
 }
 input,
 textarea {
-  background-color: white;
+
   border: 1px solid white;
   color: black;
 }
