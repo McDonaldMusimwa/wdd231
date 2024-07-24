@@ -471,7 +471,7 @@ dialog {
 }
 
 /* discover */
-.blue-background {
+/*.blue-background {
     background-size: cover;
     background-position: center;
 }
@@ -491,6 +491,25 @@ dialog {
 .blue-background > img {
     opacity: 0;
     transition: opacity 200ms ease-in-out;
+}*/
+/* discover */
+.blue-background {
+    background-size: cover;
+    background-position: center;
+}
+
+.discoverimage {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+}
+
+.blue-background.loaded > img {
+    opacity: 1;
 }
 
 #discoverdata,
@@ -501,6 +520,10 @@ dialog {
     gap: 10px
 }
 
+iframe {
+    border: none; /* Removes the border */
+    overflow: hidden; /* Prevents scrollbars */
+}
 
 
 @media (min-width:600px) {

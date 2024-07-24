@@ -104,42 +104,41 @@ async function MemberShip() {
     console.log(a);
   }
 }
-EventsRender(), a(), MemberShip();
+
+EventsRender(),
+  a(),
+  MemberShip();
 let formdata = document.getElementById("join-form");
 formdata &&
   formdata.addEventListener("submit", (e) => {
     e.preventDefault(), i();
   });
-let images = document.querySelectorAll("[data-src]");
-images.forEach((e) => {
-  o.observe(e);
-}),
-  d(),
 
 
 
   // Initialize the observer on page load
-  LazyLoad();
-document.addEventListener("DOMContentLoaded", function () {
-  const visitMessageElement = document.querySelectorAll(".sidebar");
-  const lastVisit = localStorage.getItem("lastVisit");
-  const currentVisit = new Date();
+  //LazyLoad();
+  document.addEventListener("DOMContentLoaded", function () {
+    LazyLoad()
+    const visitMessageElement = document.querySelectorAll(".sidebar");
+    const lastVisit = localStorage.getItem("lastVisit");
+    const currentVisit = new Date();
 
-  if (lastVisit) {
-    const lastVisitDate = new Date(lastVisit);
-    const timeDifference = currentVisit - lastVisitDate;
-    const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    if (lastVisit) {
+      const lastVisitDate = new Date(lastVisit);
+      const timeDifference = currentVisit - lastVisitDate;
+      const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-    if (daysDifference === 0) {
-      visitMessageElement.textContent = "Welcome back! You visited us today.";
-    } else if (daysDifference === 1) {
-      visitMessageElement.textContent = `Welcome back! You visited us yesterday.`;
+      if (daysDifference === 0) {
+        visitMessageElement.textContent = "Welcome back! You visited us today.";
+      } else if (daysDifference === 1) {
+        visitMessageElement.textContent = `Welcome back! You visited us yesterday.`;
+      } else {
+        visitMessageElement.textContent = `Welcome back! `;
+      }
     } else {
-      visitMessageElement.textContent = `Welcome back! `;
+      visitMessageElement.textContent = "Welcome to Busy Corner Chamber of Commerce!";
     }
-  } else {
-    visitMessageElement.textContent = "Welcome to Busy Corner Chamber of Commerce!";
-  }
 
-  localStorage.setItem("lastVisit", currentVisit);
-});
+    localStorage.setItem("lastVisit", currentVisit);
+  });
