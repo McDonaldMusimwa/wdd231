@@ -1,1 +1,23 @@
-function preloadImage(e){let t=e.getAttribute("data-src");t&&(e.src=t)}let imgOptions={},imgObserver=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&(preloadImage(e.target),t.unobserve(e.target))})},imgOptions);export{imgObserver};
+function preloadImage(img) {
+    const src = img.getAttribute('data-src');
+    if (src) {
+        img.src = src;
+    }
+}
+
+const imgOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.1 // Load image when 10% of it is visible
+};
+
+const imgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            preloadImage(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, imgOptions);
+
+export { imgObserver };

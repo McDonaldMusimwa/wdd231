@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else if (daysDifference === 1) {
       visitMessageElement.textContent = `Welcome back! You visited us yesterday.`;
     } else {
-      visitMessageElement.textContent = `Welcome back! You visited us ${daysDifference} days ago.`;
+      visitMessageElement.textContent = `Welcome back! `;
     }
   } else {
     visitMessageElement.textContent = 'Welcome to Busy Corner Chamber of Commerce!';
