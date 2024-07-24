@@ -521,6 +521,7 @@ dialog {
 }
 
 iframe {
+    width: 100%;
     border: none; /* Removes the border */
     overflow: hidden; /* Prevents scrollbars */
 }
