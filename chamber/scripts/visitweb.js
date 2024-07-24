@@ -1,1 +1,33 @@
-function displayVisitorMessage(){let e=localStorage.getItem("lastVisit"),s=Date.now(),t=document.createElement("span"),i="";if(e){let o=new Date(parseInt(e,10)),a=s-o.getTime(),l=Math.floor(a/864e5);i=l<1?"Back so soon! Awesome!":1===l?"You last visited 1 day ago.":`You last visited ${l} days ago.`}else i="Welcome! Let us know if you have any questions.";localStorage.setItem("lastVisit",s.toString());let n=document.querySelector(".sidebar");t.innerHTML=i,n.appendChild(t),n.style.display="block",setTimeout(()=>{n.style.display="none"},1e4)}export{displayVisitorMessage};
+function displayVisitorMessage() {
+    try {
+        let lastVisit = localStorage.getItem("lastVisit");
+        const now = Date.now();
+        const messageElement = document.createElement("span");
+        let message = "";
+
+        if (lastVisit) {
+            const lastVisitDate = new Date(parseInt(lastVisit, 10));
+            const timeDifference = now - lastVisitDate.getTime();
+            const daysAgo = Math.floor(timeDifference / 864e5);
+            message = daysAgo < 1 ? "Back so soon! Awesome!" :
+                      daysAgo === 1 ? "You last visited 1 day ago." :
+                      `You last visited ${daysAgo} days ago.`;
+        } else {
+            message = "Welcome! Let us know if you have any questions.";
+        }
+
+        localStorage.setItem("lastVisit", now.toString());
+
+        const sidebar = document.querySelector(".sidebar");
+        if (sidebar) {
+            messageElement.innerHTML = message;
+            sidebar.appendChild(messageElement);
+            sidebar.style.display = "block";
+            setTimeout(() => sidebar.style.display = "none", 10000);
+        }
+    } catch (error) {
+        console.error("Error handling visitor message:", error);
+    }
+}
+
+export { displayVisitorMessage };

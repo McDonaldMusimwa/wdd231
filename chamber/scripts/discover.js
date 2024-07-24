@@ -1,23 +1,20 @@
-function preloadImage(img) {
-    const src = img.getAttribute('data-src');
-    if (src) {
-        img.src = src;
-    }
-}
+function LazyLoad() {
+    const blueDivs = document.querySelectorAll(".blue-background");
 
-const imgOptions = {
-    root: null, // Use the viewport as the root
-    rootMargin: '0px',
-    threshold: 0.1 // Load image when 10% of it is visible
-};
+    blueDivs.forEach((div) => {
+     
+        const img = div.querySelector("img");
+      
+        function loaded() {
+            div.classList.add("loaded");
+        }
 
-const imgObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            preloadImage(entry.target);
-            observer.unobserve(entry.target);
+        if (img.complete) {
+            loaded();
+        } else {
+            img.addEventListener("load", loaded);
         }
     });
-}, imgOptions);
+}
 
-export { imgObserver };
+export {LazyLoad}

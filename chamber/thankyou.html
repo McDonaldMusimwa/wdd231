@@ -1,156 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Busy Corner" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://www.example.com/image.jpg" />
-    <meta property="og:url" content="https://www.example.com/page-url" />
-    <meta
-      property="og:description"
-      content="Busy Corner is a group of business that seek to nertwork and bring ease of business"
-    />
-    <meta
-      name="description"
-      content="Busy Corner is a group of business that seek to nertwork and bring ease of business"
-    />
 
-    <meta property="og:site_name" content="Busy Corner" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="author" content="McDonald Musimwa" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Busy Corner">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.example.com/image.jpg">
+  <meta property="og:url" content="https://www.example.com/page-url">
+  <meta property="og:description"
+    content="Busy Corner is a group of business that seek to nertwork and bring ease of business">
+  <meta name="description"
+    content="Busy Corner is a group of business that seek to nertwork and bring ease of business">
 
-    <link rel="icon" href="images/svg/logo-black.svg" type="image/x-icon" />
-    <style>
-      /* Inline critical CSS */
-      body {
-        font-family: "Roboto", Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+  <meta property="og:site_name" content="Busy Corner">
+  <meta property="og:locale" content="en_US">
+  <meta name="author" content="McDonald Musimwa">
+
+
+  <link rel="icon" href="images/svg/logo-black.svg" type="image/x-icon">
+  <style>
+    /* Inline critical CSS */
+    body {
+      font-family: "Roboto", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    label {
+      display: block;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userData = localStorage.getItem("userData");
+
+      if (userData) {
+        const user = JSON.parse(userData); // Parse the JSON string into a JavaScript object
+        rendernewUser(user);
+      } else {
+        console.error("No user data found in localStorage.");
       }
-      .header {
-        background-color: #4caf50;
-        color: white;
-        text-align: center;
-        padding: 1em;
-      }
+    });
 
-      label{
-        display: block;
-      }
-    </style>
-    <script>
-     document.addEventListener("DOMContentLoaded", () => {
-  const userData = localStorage.getItem("userData");
 
-  if (userData) {
-    const user = JSON.parse(userData); // Parse the JSON string into a JavaScript object
-    rendernewUser(user);
-  } else {
-    console.error("No user data found in localStorage.");
-  }
-});
-      
+    function rendernewUser(user) {
+      console.log(user.firstname)
+      document.querySelector(".userfirstname").innerHTML = user.firstname || "";
+      document.querySelector(".userlastname").innerHTML = user.lastname || "";
+      document.querySelector(".userphone").innerHTML = user.phone || "";
+      document.querySelector(".useremail").innerHTML = user.email || "";
+      document.querySelector(".usertitle").innerHTML = user.organisationtitle || "";
+      document.querySelector(".userorganization").innerHTML = user.organisationname || "";
+      document.querySelector(".userdescription").innerHTML = user.organisationdescription || "";
+      document.querySelector(".usermembership").innerHTML = user.membership || "";
+      document.querySelector(".usertimestamp").innerHTML = user.timestamp || "";
+    }
 
-      function rendernewUser(user) {
-        console.log(user.firstname)
-  document.querySelector(".userfirstname").innerHTML = user.firstname || "";
-  document.querySelector(".userlastname").innerHTML = user.lastname || "";
-  document.querySelector(".userphone").innerHTML = user.phone || "";
-  document.querySelector(".useremail").innerHTML = user.email || "";
-  document.querySelector(".usertitle").innerHTML = user.organisationtitle || "";
-  document.querySelector(".userorganization").innerHTML = user.organisationname || "";
-  document.querySelector(".userdescription").innerHTML = user.organisationdescription || "";
-  document.querySelector(".usermembership").innerHTML = user.membership || "";
-  document.querySelector(".usertimestamp").innerHTML = user.timestamp || "";
-}
+  </script>
 
-    </script>
-
-    <title>Busy Corner chamber of commerce</title>
-    <!--
+  <title>Busy Corner chamber of commerce</title>
+  <!--
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     -->
-    <link
-      rel="stylesheet"
-      href="styles/base.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="styles/large.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <script defer src="scripts/javascript.js" type="module"></script>
-  </head>
-  <body>
-    <header>
-      <div class="topnav">
-        <div class="logocontainer">
-          <img
-            id="logo"
-            src="./images/svg/logo-no-background.svg"
-            alt="busy corner logo"
-          />
-          <h1>Chamber of Commerce</h1>
-        </div>
+  <link rel="stylesheet" href="styles/base.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="styles/large.css" media="print" onload="this.media='all'">
+  <script src="scripts/javascript.js" type="module"></script>
+</head>
 
-        <div id="burger-menu" class="burger-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-      <nav class="topnav">
-        <ul class="nav_menu">
-          <li><a href="./index.html">Home</a></li>
-          <li class="nav_item">
-            <a class="nav_link" href="./discover.html">Discover</a>
-          </li>
-          <li class="nav_item">
-            <a href="./directory.html" class="nav_link">Directory</a>
-          </li>
-          <li class="nav_item">
-            <a href="./join.html" class="nav_link">Join</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div id="Thankyou" class="card">
-        <h3>Thank for deciding to join Us</h3>
-        <div id="memberinfo">
-          <label>First Name :<span class="userfirstname"></span></label>
-          <label>Last Name :<span class="userlastname"></span></label>
-          <label>Title : <span class="usertitle"></span></label>
-          <label>Phone :<span class="userphone"></span></label>
-          <label>Email :<span class="useremail"></span></label>
-          <label>Organization :<span class="userorganization"></span></label>
-          <label><span class="userdescription"></span></label>
-          <label>Membership Level :<span class="usermembership"></span></label>
-          <label>Date Joined :<span class="usertimestamp"></span></label>
-     
-          
+<body>
+  <header>
+    <div class="topnav">
+      <div class="logocontainer">
+        <img id="logo" src="./images/svg/logo-no-background.svg" alt="busy corner logo">
+        <h1>Chamber of Commerce</h1>
       </div>
 
-          <h4>We will get back to you shortly.</h4>
-    </main>
-    <footer>
-      <p>
-        ©<span id="currentyear"> </span>🤖 McDonald Musimwa 🤖 Course WDD231 🤖
-        South Africa
-      </p>
+      <div id="burger-menu" class="burger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <nav class="topnav">
+      <ul class="nav_menu">
+        <li><a href="./index.html">Home</a></li>
+        <li class="nav_item">
+          <a class="nav_link" href="./discover.html">Discover</a>
+        </li>
+        <li class="nav_item">
+          <a href="./directory.html" class="nav_link">Directory</a>
+        </li>
+        <li class="nav_item">
+          <a href="./join.html" class="nav_link">Join</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+   
+      <h3>Thank for deciding to join Us</h3>
+      <div id="memberinfo">
+        <label>First Name :<span class="userfirstname"></span></label>
+        <label>Last Name :<span class="userlastname"></span></label>
+        <label>Title : <span class="usertitle"></span></label>
+        <label>Phone :<span class="userphone"></span></label>
+        <label>Email :<span class="useremail"></span></label>
+        <label>Organization :<span class="userorganization"></span></label>
+        <label><span class="userdescription"></span></label>
+        <label>Membership Level :<span class="usermembership"></span></label>
+        <label>Date Joined :<span class="usertimestamp"></span></label>
 
-      <p id="lastmodified"></p>
-    </footer>
-  </body>
+
+      </div>
+
+      <h4>We will get back to you shortly.</h4>
+  </main>
+  <footer>
+    <p>
+      ©<span id="currentyear"> </span>🤖 McDonald Musimwa 🤖 Course WDD231 🤖
+      South Africa
+    </p>
+
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+
 </html>
